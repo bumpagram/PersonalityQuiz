@@ -16,10 +16,17 @@ class ResultsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        calcResult()
     }
     
 
-    
+    func calcResult() {
+        let frequencyOfAnswers = responses.reduce(into: [:]) { partialResult, Answer in
+            partialResult[Answer.type, default: 0] += 1
+            // замыкание, а ля цикл ФОР проходит по всем элементам (destination, source) -> Optional
+        }
+        
+    }
     
     
     
