@@ -15,6 +15,7 @@
 		5A49FBE22AA9D8F1001C825D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A49FBE02AA9D8F1001C825D /* LaunchScreen.storyboard */; };
 		5A49FBEA2AAA095D001C825D /* QuestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A49FBE92AAA095D001C825D /* QuestionVC.swift */; };
 		5A49FBEC2AAA0979001C825D /* ResultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A49FBEB2AAA0979001C825D /* ResultsVC.swift */; };
+		5AA2AB952AAAFCA400EF8966 /* QuestionDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA2AB942AAAFCA400EF8966 /* QuestionDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		5A49FBE32AA9D8F1001C825D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A49FBE92AAA095D001C825D /* QuestionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionVC.swift; sourceTree = "<group>"; };
 		5A49FBEB2AAA0979001C825D /* ResultsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsVC.swift; sourceTree = "<group>"; };
+		5AA2AB942AAAFCA400EF8966 /* QuestionDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 		5A49FBC92AA9D8F0001C825D = {
 			isa = PBXGroup;
 			children = (
+				5AA2AB942AAAFCA400EF8966 /* QuestionDataModel.swift */,
 				5A49FBEB2AAA0979001C825D /* ResultsVC.swift */,
 				5A49FBE92AAA095D001C825D /* QuestionVC.swift */,
 				5A49FBD42AA9D8F0001C825D /* PersonalityQuiz */,
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A49FBEA2AAA095D001C825D /* QuestionVC.swift in Sources */,
+				5AA2AB952AAAFCA400EF8966 /* QuestionDataModel.swift in Sources */,
 				5A49FBDA2AA9D8F0001C825D /* IntroVC.swift in Sources */,
 				5A49FBD62AA9D8F0001C825D /* AppDelegate.swift in Sources */,
 				5A49FBEC2AAA0979001C825D /* ResultsVC.swift in Sources */,

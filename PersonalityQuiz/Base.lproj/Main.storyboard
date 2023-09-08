@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which Animal Are You?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ht3-Zg-Nyc">
-                                <rect key="frame" x="5" y="448.66666666666669" width="420" height="34.999999999999943"/>
+                                <rect key="frame" x="5" y="448.66666666666669" width="420" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -89,7 +89,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjr-H8-lC8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="questionLabel" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjr-H8-lC8">
                                 <rect key="frame" x="20" y="283.66666666666669" width="390" height="38.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
@@ -216,16 +216,23 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hsx-3e-pHZ">
+                                <rect key="frame" x="26" y="893" width="378" height="4"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YTg-2P-OmL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="hsx-3e-pHZ" firstAttribute="centerX" secondItem="RZi-dZ-vQW" secondAttribute="centerX" id="2P5-Fy-Uao"/>
+                            <constraint firstItem="YTg-2P-OmL" firstAttribute="trailing" secondItem="hsx-3e-pHZ" secondAttribute="trailing" constant="26" id="4a9-FQ-5qU"/>
                             <constraint firstItem="YTg-2P-OmL" firstAttribute="trailing" secondItem="eTH-KP-3f4" secondAttribute="trailing" constant="20" id="82c-Zs-TaU"/>
+                            <constraint firstItem="hsx-3e-pHZ" firstAttribute="leading" secondItem="YTg-2P-OmL" secondAttribute="leading" constant="26" id="HDH-LD-bMB"/>
                             <constraint firstItem="YTg-2P-OmL" firstAttribute="trailing" secondItem="tjr-H8-lC8" secondAttribute="trailing" constant="20" id="OGS-ti-CgU"/>
                             <constraint firstItem="zTg-bR-SLX" firstAttribute="centerY" secondItem="RZi-dZ-vQW" secondAttribute="centerY" id="Rvy-cI-mpg"/>
                             <constraint firstItem="tjr-H8-lC8" firstAttribute="leading" secondItem="YTg-2P-OmL" secondAttribute="leading" constant="20" id="Wfm-I1-Tbt"/>
                             <constraint firstItem="YAY-Vz-Ynk" firstAttribute="leading" secondItem="YTg-2P-OmL" secondAttribute="leading" constant="20" id="cLx-vr-HU2"/>
                             <constraint firstItem="eTH-KP-3f4" firstAttribute="centerY" secondItem="RZi-dZ-vQW" secondAttribute="centerY" id="dTg-gR-ZMb"/>
+                            <constraint firstItem="YTg-2P-OmL" firstAttribute="bottom" secondItem="hsx-3e-pHZ" secondAttribute="bottom" constant="25" id="do0-CJ-1PM"/>
                             <constraint firstItem="YTg-2P-OmL" firstAttribute="trailing" secondItem="YAY-Vz-Ynk" secondAttribute="trailing" constant="20" id="hbp-ll-xMj"/>
                             <constraint firstItem="eTH-KP-3f4" firstAttribute="leading" secondItem="YTg-2P-OmL" secondAttribute="leading" constant="20" id="iAd-D0-mVd"/>
                             <constraint firstItem="zTg-bR-SLX" firstAttribute="leading" secondItem="YTg-2P-OmL" secondAttribute="leading" constant="20" id="ivF-tu-j53"/>
@@ -235,8 +242,23 @@
                             <constraint firstItem="tjr-H8-lC8" firstAttribute="top" secondItem="YTg-2P-OmL" secondAttribute="top" priority="250" constant="30" id="r5f-6i-832"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="XwW-Pg-tF8"/>
+                    <navigationItem key="navigationItem" title="questions" id="XwW-Pg-tF8"/>
                     <connections>
+                        <outlet property="multiLabel1" destination="pBh-95-SAy" id="SUE-SK-SRa"/>
+                        <outlet property="multiLabel2" destination="4X6-L5-K2N" id="ImF-vR-vCI"/>
+                        <outlet property="multiLabel3" destination="D9r-6g-rHd" id="BJe-hs-3rs"/>
+                        <outlet property="multiLabel4" destination="aoM-ib-U1V" id="Dcz-x5-Juu"/>
+                        <outlet property="multiStack" destination="eTH-KP-3f4" id="JLE-oP-mVo"/>
+                        <outlet property="progessView" destination="hsx-3e-pHZ" id="Ost-FI-9UQ"/>
+                        <outlet property="questionLabel" destination="tjr-H8-lC8" id="tPI-H6-cQg"/>
+                        <outlet property="rangedLabel1" destination="116-WN-0Y2" id="rsD-cW-Iez"/>
+                        <outlet property="rangedLabel2" destination="CXh-0d-nWj" id="b3j-Pa-jZ5"/>
+                        <outlet property="rangedStack" destination="zTg-bR-SLX" id="6Ig-kU-YjO"/>
+                        <outlet property="singleButton1" destination="Otw-oR-ZTq" id="oPl-bH-f3A"/>
+                        <outlet property="singleButton2" destination="0lA-ch-kIj" id="suO-za-qyR"/>
+                        <outlet property="singleButton3" destination="pXZ-q9-Su1" id="bpY-M0-3WS"/>
+                        <outlet property="singleButton4" destination="Ehh-OL-AsC" id="Y2s-9m-oGd"/>
+                        <outlet property="singleStack" destination="YAY-Vz-Ynk" id="tRQ-k3-tpf"/>
                         <segue destination="5CB-yl-VDf" kind="show" identifier="Results" id="Djw-Gq-xdY"/>
                     </connections>
                 </viewController>
