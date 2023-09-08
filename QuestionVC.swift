@@ -23,10 +23,15 @@ class QuestionVC: UIViewController {
     @IBOutlet var multiLabel2: UILabel!
     @IBOutlet var multiLabel3: UILabel!
     @IBOutlet var multiLabel4: UILabel!
+    @IBOutlet var multiSwitch1: UISwitch!
+    @IBOutlet var multiSwitch2: UISwitch!
+    @IBOutlet var multiSwitch3: UISwitch!
+    @IBOutlet var multiSwitch4: UISwitch!
     
     @IBOutlet var rangedStack: UIStackView!
     @IBOutlet var rangedLabel1: UILabel!
     @IBOutlet var rangedLabel2: UILabel!
+    @IBOutlet var rangedSlider: UISlider!
     
     
     override func viewDidLoad() {
@@ -48,6 +53,33 @@ class QuestionVC: UIViewController {
         nextQuestion()
     }
     
+    @IBAction func multiAnswerButtonPressed() {
+        let currentAnswers = questions[indexQuestion].answers
+        
+        if multiSwitch1.isOn {
+            answersChosen.append(currentAnswers[0])
+        }
+        if multiSwitch2.isOn {
+            answersChosen.append(currentAnswers[1])
+        }
+        if multiSwitch3.isOn {
+            answersChosen.append(currentAnswers[2])
+        }
+        if multiSwitch4.isOn {
+            answersChosen.append(currentAnswers[3])
+        }
+        nextQuestion()
+    }
+    
+    @IBAction func rangedAnswerButtonPressed() {
+        let currentAnswers = questions[indexQuestion].answers
+//“To convert a slider value to an array’s index, use the equation index = slider value * (number of answers - 1) rounded to the nearest integer.”
+ 
+        let index = Int( round( rangedSlider.value * Float((currentAnswers.count - 1)) ) )
+        // посчитали в Флоат, округлили через Round и привели к Интам, чтобы сделать индексом массива
+        answersChosen.append(currentAnswers[index])
+        nextQuestion()
+    }
     
     
     
@@ -133,7 +165,7 @@ class QuestionVC: UIViewController {
         rangedLabel2.text = answers.last?.text // аналогично
     }
     func nextQuestion() {
-        // код будет позже 
+        // код будет позже
     }
     
     

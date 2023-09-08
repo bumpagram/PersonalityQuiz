@@ -90,7 +90,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="questionLabel" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjr-H8-lC8">
-                                <rect key="frame" x="20" y="283.66666666666669" width="390" height="38.333333333333314"/>
+                                <rect key="frame" x="20" y="86" width="390" height="38.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -195,6 +195,9 @@
                                         <rect key="frame" x="0.0" y="204" width="390" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Sumbit answer"/>
+                                        <connections>
+                                            <action selector="multiAnswerButtonPressed" destination="ITg-DX-uIl" eventType="touchUpInside" id="asI-Oj-gZN"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -225,6 +228,9 @@
                                         <rect key="frame" x="0.0" y="50.333333333333314" width="390" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Submit answer"/>
+                                        <connections>
+                                            <action selector="rangedAnswerButtonPressed" destination="ITg-DX-uIl" eventType="touchUpInside" id="QVF-ip-2Cn"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -256,21 +262,26 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="YAY-Vz-Ynk"/>
-                                <exclude reference="zTg-bR-SLX"/>
+                                <exclude reference="eTH-KP-3f4"/>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="questions" id="XwW-Pg-tF8"/>
+                    <navigationItem key="navigationItem" title="Quiz" id="XwW-Pg-tF8"/>
                     <connections>
                         <outlet property="multiLabel1" destination="pBh-95-SAy" id="SUE-SK-SRa"/>
                         <outlet property="multiLabel2" destination="4X6-L5-K2N" id="ImF-vR-vCI"/>
                         <outlet property="multiLabel3" destination="D9r-6g-rHd" id="BJe-hs-3rs"/>
                         <outlet property="multiLabel4" destination="aoM-ib-U1V" id="Dcz-x5-Juu"/>
                         <outlet property="multiStack" destination="eTH-KP-3f4" id="JLE-oP-mVo"/>
+                        <outlet property="multiSwitch1" destination="o9a-PJ-QaR" id="Gwx-hC-sOe"/>
+                        <outlet property="multiSwitch2" destination="I61-8S-B5o" id="Fys-7o-uES"/>
+                        <outlet property="multiSwitch3" destination="zOc-3L-wBg" id="HvV-EF-EYY"/>
+                        <outlet property="multiSwitch4" destination="7zT-WV-Eil" id="K4O-td-ViD"/>
                         <outlet property="progessView" destination="hsx-3e-pHZ" id="Ost-FI-9UQ"/>
                         <outlet property="questionLabel" destination="tjr-H8-lC8" id="tPI-H6-cQg"/>
                         <outlet property="rangedLabel1" destination="116-WN-0Y2" id="rsD-cW-Iez"/>
                         <outlet property="rangedLabel2" destination="CXh-0d-nWj" id="b3j-Pa-jZ5"/>
+                        <outlet property="rangedSlider" destination="CTm-lK-s3B" id="CE0-qV-zVQ"/>
                         <outlet property="rangedStack" destination="zTg-bR-SLX" id="6Ig-kU-YjO"/>
                         <outlet property="singleButton1" destination="Otw-oR-ZTq" id="oPl-bH-f3A"/>
                         <outlet property="singleButton2" destination="0lA-ch-kIj" id="suO-za-qyR"/>
