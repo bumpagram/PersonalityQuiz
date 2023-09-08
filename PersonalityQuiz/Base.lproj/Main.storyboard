@@ -102,21 +102,33 @@
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="ITg-DX-uIl" eventType="touchUpInside" id="5Rr-V1-UQm"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lA-ch-kIj">
                                         <rect key="frame" x="0.0" y="54.333333333333371" width="390" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="ITg-DX-uIl" eventType="touchUpInside" id="GiS-T7-Pyb"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXZ-q9-Su1">
                                         <rect key="frame" x="0.0" y="108.66666666666669" width="390" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="ITg-DX-uIl" eventType="touchUpInside" id="mt7-ER-VSG"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehh-OL-AsC">
                                         <rect key="frame" x="0.0" y="163.00000000000006" width="390" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="ITg-DX-uIl" eventType="touchUpInside" id="Ycp-EV-hTo"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -241,6 +253,12 @@
                             <constraint firstItem="eTH-KP-3f4" firstAttribute="top" secondItem="tjr-H8-lC8" secondAttribute="bottom" constant="20" id="qIb-af-voC"/>
                             <constraint firstItem="tjr-H8-lC8" firstAttribute="top" secondItem="YTg-2P-OmL" secondAttribute="top" priority="250" constant="30" id="r5f-6i-832"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="YAY-Vz-Ynk"/>
+                                <exclude reference="zTg-bR-SLX"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="questions" id="XwW-Pg-tF8"/>
                     <connections>
