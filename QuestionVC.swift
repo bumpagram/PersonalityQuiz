@@ -81,6 +81,9 @@ class QuestionVC: UIViewController {
         nextQuestion()
     }
     
+    @IBSegueAction func showResults(_ coder: NSCoder) -> ResultsVC? {
+        return ResultsVC(coder: coder, responses: answersChosen) // закинул сюда свой кастомный инициализатор из 3 экрана
+    }
     
     
     
@@ -158,14 +161,26 @@ class QuestionVC: UIViewController {
         multiLabel2.text = answers[1].text
         multiLabel3.text = answers[2].text
         multiLabel4.text = answers[3].text
+        multiSwitch1.isOn = false
+        multiSwitch2.isOn = false
+        multiSwitch3.isOn = false
+        multiSwitch4.isOn = false
     }
     func updateRangedStack(using answers: [Answer]) {
         rangedStack.isHidden = false
         rangedLabel1.text = answers.first?.text // проперти коллекции, обращение к первому элементу
         rangedLabel2.text = answers.last?.text // аналогично
+        rangedSlider.setValue(0.5, animated: false)
     }
     func nextQuestion() {
         // код будет позже
+        indexQuestion += 1
+        if indexQuestion < questions.count {
+            updateUI()
+        } else {
+            performSegue(withIdentifier: "Results", sender: nil)  // уйти с экрана на контроллер с результатами, если вопросы кончились
+        }
+        
     }
     
     

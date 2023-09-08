@@ -90,7 +90,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="questionLabel" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjr-H8-lC8">
-                                <rect key="frame" x="20" y="86" width="390" height="38.333333333333343"/>
+                                <rect key="frame" x="20" y="283.66666666666669" width="390" height="38.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -259,12 +259,6 @@
                             <constraint firstItem="eTH-KP-3f4" firstAttribute="top" secondItem="tjr-H8-lC8" secondAttribute="bottom" constant="20" id="qIb-af-voC"/>
                             <constraint firstItem="tjr-H8-lC8" firstAttribute="top" secondItem="YTg-2P-OmL" secondAttribute="top" priority="250" constant="30" id="r5f-6i-832"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="YAY-Vz-Ynk"/>
-                                <exclude reference="eTH-KP-3f4"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Quiz" id="XwW-Pg-tF8"/>
                     <connections>
@@ -288,7 +282,7 @@
                         <outlet property="singleButton3" destination="pXZ-q9-Su1" id="bpY-M0-3WS"/>
                         <outlet property="singleButton4" destination="Ehh-OL-AsC" id="Y2s-9m-oGd"/>
                         <outlet property="singleStack" destination="YAY-Vz-Ynk" id="tRQ-k3-tpf"/>
-                        <segue destination="5CB-yl-VDf" kind="show" identifier="Results" id="Djw-Gq-xdY"/>
+                        <segue destination="5CB-yl-VDf" kind="show" identifier="Results" destinationCreationSelector="showResults:" id="Djw-Gq-xdY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IdO-pc-0Su" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -329,6 +323,10 @@
                     <navigationItem key="navigationItem" title="Results" id="QrZ-rC-07j">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="R8V-mE-SSG"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="Cat-N7-KSP" id="uep-8F-MAE"/>
+                        <outlet property="verdictLabel" destination="zXf-XZ-F3u" id="L1r-a2-Nbj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="of8-zw-A0F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
