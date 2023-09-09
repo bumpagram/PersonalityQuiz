@@ -17,6 +17,8 @@ class ResultsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         calcResult()
+        navigationItem.hidesBackButton = true
+        // спрятать кнопку назад ради здравого смысла + счетчик с кнопки sumbit увеличивается всегда и ввиду отсутствуещего индекса крашит приложение
     }
     
 
@@ -25,7 +27,13 @@ class ResultsVC: UIViewController {
             partialResult[Answer.type, default: 0] += 1
             // замыкание, а ля цикл ФОР проходит по всем элементам (destination, source) -> Optional
         }
-        
+        let freqAnswersSorted = frequencyOfAnswers.sorted { one, two in
+            one.value > two.value // еще замыкание, словарь отсортировать по убыванию
+        }
+        let mostCommonAnswer = freqAnswersSorted.first?.key
+        // из пары ключ-значение первого элемента снимаем ключ- сущность и это наш ответ кто пользователь (по частоте ответов)
+        verdictLabel.text = "You are a \(mostCommonAnswer?.rawValue ?? "-") !"
+        descriptionLabel.text = mostCommonAnswer?.definition
     }
     
     

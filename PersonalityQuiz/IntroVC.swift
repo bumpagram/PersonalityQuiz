@@ -14,6 +14,10 @@ class IntroVC: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func unwindToQuizIntro(segueTo: UIStoryboardSegue) {
+        // кастомный экшен чтобы данный экран считался за норм лендинг и можно было перенаправить сюда с Done
+        
+    }
 
 }
 

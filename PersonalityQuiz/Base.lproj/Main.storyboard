@@ -320,8 +320,12 @@
                             <constraint firstItem="zXf-XZ-F3u" firstAttribute="centerX" secondItem="xjq-ST-zBw" secondAttribute="centerX" id="zlu-A6-MPk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Results" id="QrZ-rC-07j">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="R8V-mE-SSG"/>
+                    <navigationItem key="navigationItem" title="Results" leftItemsSupplementBackButton="YES" id="QrZ-rC-07j">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="R8V-mE-SSG">
+                            <connections>
+                                <segue destination="sqg-M2-xfa" kind="unwind" unwindAction="unwindToQuizIntroWithSegueTo:" id="SPh-ZX-e7o"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="descriptionLabel" destination="Cat-N7-KSP" id="uep-8F-MAE"/>
@@ -329,6 +333,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="of8-zw-A0F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="sqg-M2-xfa" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2656.875" y="-35.91549295774648"/>
         </scene>
